@@ -1,0 +1,122 @@
+Vertexes = [
+    {
+        "id": "b-2-stair-1",
+        "x": 1970,
+        "y": 273,
+        "type": "stair",
+        "neighborData": [
+            [
+                "b-2_6",
+                85
+            ]
+        ]
+    },
+    {
+        "id": "b-food",
+        "x": 785,
+        "y": 273,
+        "type": "entrancesToAu",
+        "neighborData": [
+            [
+                "b-2_3",
+                910
+            ]
+        ]
+    },
+    {
+        "id": "b-207",
+        "x": 1695,
+        "y": 225,
+        "type": "entrancesToAu",
+        "neighborData": [
+            [
+                "b-2_3",
+                48
+            ]
+        ]
+    },
+    {
+        "id": "b-2_3",
+        "x": 1695,
+        "y": 273,
+        "type": "hallway",
+        "neighborData": [
+            [
+                "b-2_6",
+                190
+            ],
+            [
+                "b-207",
+                48
+            ],
+            [
+                "b-food",
+                910
+            ]
+        ]
+    },
+    {
+        "id": "b-201",
+        "x": 1885,
+        "y": 325,
+        "type": "crossingSpace",
+        "neighborData": [
+            [
+                "b-2_6",
+                52
+            ],
+            [
+                "b-201a",
+                100
+            ]
+        ]
+    },
+    {
+        "id": "b-201a",
+        "x": 1885,
+        "y": 425,
+        "type": "entrancesToAu",
+        "neighborData": [
+            [
+                "b-201",
+                100
+            ]
+        ]
+    },
+    {
+        "id": "b-2_6",
+        "x": 1885,
+        "y": 273,
+        "type": "hallway",
+        "neighborData": [
+            [
+                "b-2_3",
+                190
+            ],
+            [
+                "b-208",
+                48
+            ],
+            [
+                "b-201",
+                52
+            ],
+            [
+                "b-2-stair-1",
+                85
+            ]
+        ]
+    },
+    {
+        "id": "b-208",
+        "x": 1885,
+        "y": 225,
+        "type": "entrancesToAu",
+        "neighborData": [
+            [
+                "b-2_6",
+                48
+            ]
+        ]
+    }
+]
