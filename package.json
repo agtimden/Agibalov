@@ -12,5 +12,8 @@
   "devDependencies": {
     "eslint": "^9.24.0",
     "htmlhint": "^1.1.4"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.5"
   }
 }
