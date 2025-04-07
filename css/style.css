@@ -1,14 +1,47 @@
-/* Кастомные стили для шапки */
-.header {
-    margin-bottom: 2rem;
+.notification {
+    background-color: #d1e7dd;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 500;
   }
   
-  .navbar-brand {
-    font-weight: 700;
-    font-size: 1.5rem;
+  .tutor-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
   }
   
-  .nav-link {
+  footer {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+/* Стили для ссылок курсов */
+.course-link {
+    color: #0d6efd;
+    text-decoration: none;
     font-size: 1.1rem;
-    margin-left: 1rem;
+    display: inline-block;
+    padding: 5px 0;
+    transition: color 0.2s;
+  }
+  
+  .course-link:hover {
+    color: #0a58ca;
+    text-decoration: underline;
+  }
+  
+  /* Стили для страницы курса */
+  #course-content .card {
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+  
+  #course-content .card-body {
+    padding: 2rem;
   }
