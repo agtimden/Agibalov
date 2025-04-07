@@ -1,0 +1,14 @@
+/* Кастомные стили для шапки */
+.header {
+    margin-bottom: 2rem;
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    font-size: 1.1rem;
+    margin-left: 1rem;
+  }
