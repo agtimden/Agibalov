@@ -1,0 +1,283 @@
+/* Сброс стандартных отступов и полей для всех элементов */
+* {
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине элемента */
+}
+
+/* Основные стили для body */
+body {
+    font-family: 'Montserrat', sans-serif; /* Устанавливаем основной шрифт */
+    line-height: 1.6; /* Устанавливаем высоту строки */
+    color: #333; /* Устанавливаем основной цвет текста */
+    background-color: #f9f9f9; /* Устанавливаем цвет фона */
+}
+
+/* Стили для header */
+header {
+    background-color: #fff; /* Устанавливаем белый фон */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Добавляем тень */
+    padding: 1rem; /* Устанавливаем внутренние отступы */
+    position: fixed; /* Фиксируем позицию */
+    width: 100%; /* Занимаем всю ширину */
+    top: 0; /* Прижимаем к верху */
+    z-index: 1000; /* Устанавливаем высокий z-index для отображения поверх других элементов */
+}
+
+/* Стили для навигации */
+nav {
+    display: flex; /* Используем flexbox для расположения элементов */
+    justify-content: center; /* Выравниваем элементы по центру */
+    gap: 2rem; /* Устанавливаем отступ между элементами */
+    margin-top: 1rem; /* Устанавливаем верхний отступ */
+}
+
+/* Стили для ссылок в навигации */
+nav a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #333; /* Устанавливаем цвет текста */
+    font-weight: 500; /* Устанавливаем жирность шрифта */
+    padding: 0.5rem 1rem; /* Устанавливаем внутренние отступы */
+    border-radius: 5px; /* Скругляем углы */
+    transition: all 0.3s ease; /* Добавляем плавный переход */
+}
+
+/* Стили для активной ссылки */
+nav a#active {
+    background-color: #ff6b6b; /* Устанавливаем цвет фона */
+    color: #fff; /* Устанавливаем цвет текста */
+}
+
+/* Стили при наведении на ссылки */
+nav a:hover {
+    background-color: #ff6b6b; /* Устанавливаем цвет фона при наведении */
+    color: #fff; /* Устанавливаем цвет текста при наведении */
+}
+
+/* Стили для main */
+main {
+    margin-top: 100px; /* Устанавливаем верхний отступ */
+    padding: 2rem; /* Устанавливаем внутренние отступы */
+}
+
+/* Стили для секций */
+section {
+    margin-bottom: 3rem; /* Устанавливаем нижний отступ */
+    padding: 2rem; /* Устанавливаем внутренние отступы */
+    background-color: #fff; /* Устанавливаем белый фон */
+    border-radius: 10px; /* Скругляем углы */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Добавляем тень */
+}
+
+/* Стили для заголовков секций */
+section h2 {
+    color: #ff6b6b; /* Устанавливаем цвет текста */
+    margin-bottom: 1.5rem; /* Устанавливаем нижний отступ */
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+/* Стили для footer */
+footer {
+    background-color: #333; /* Устанавливаем темный фон */
+    color: #fff; /* Устанавливаем белый цвет текста */
+    padding: 2rem; /* Устанавливаем внутренние отступы */
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+/* Стили для ссылок в footer */
+footer a {
+    color: #ff6b6b; /* Устанавливаем цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+/* Стили при наведении на ссылки в footer */
+footer a:hover {
+    text-decoration: underline; /* Добавляем подчеркивание при наведении */
+}
+
+/* Стили для кнопок */
+button {
+    background-color: #ff6b6b; /* Устанавливаем цвет фона */
+    color: #fff; /* Устанавливаем цвет текста */
+    border: none; /* Убираем границу */
+    padding: 0.5rem 1rem; /* Устанавливаем внутренние отступы */
+    border-radius: 5px; /* Скругляем углы */
+    cursor: pointer; /* Устанавливаем курсор pointer */
+    transition: all 0.3s ease; /* Добавляем плавный переход */
+}
+
+/* Стили при наведении на кнопки */
+button:hover {
+    background-color: #ff5252; /* Устанавливаем цвет фона при наведении */
+}
+
+/* Стили для формы */
+form {
+    max-width: 600px; /* Устанавливаем максимальную ширину */
+    margin: 0 auto; /* Центрируем форму */
+    padding: 2rem; /* Устанавливаем внутренние отступы */
+    background-color: #fff; /* Устанавливаем белый фон */
+    border-radius: 10px; /* Скругляем углы */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Добавляем тень */
+}
+
+/* Стили для полей ввода */
+input, select, textarea {
+    width: 100%; /* Занимаем всю доступную ширину */
+    padding: 0.5rem; /* Устанавливаем внутренние отступы */
+    margin-bottom: 1rem; /* Устанавливаем нижний отступ */
+    border: 1px solid #ddd; /* Устанавливаем границу */
+    border-radius: 5px; /* Скругляем углы */
+}
+
+/* Стили для меток */
+label {
+    display: block; /* Отображаем как блочный элемент */
+    margin-bottom: 0.5rem; /* Устанавливаем нижний отступ */
+    font-weight: 500; /* Устанавливаем жирность шрифта */
+}
+
+/* Стили для fieldset */
+fieldset {
+    border: none; /* Убираем границу */
+    margin-bottom: 2rem; /* Устанавливаем нижний отступ */
+}
+
+/* Стили для legend */
+legend {
+    font-size: 1.2rem; /* Устанавливаем размер шрифта */
+    font-weight: 600; /* Устанавливаем жирность шрифта */
+    margin-bottom: 1rem; /* Устанавливаем нижний отступ */
+    color: #ff6b6b; /* Устанавливаем цвет текста */
+}
+
+/* Стили для чекбоксов и радиокнопок */
+input[type="checkbox"], input[type="radio"] {
+    width: auto; /* Сбрасываем ширину */
+    margin-right: 0.5rem; /* Устанавливаем правый отступ */
+}
+
+/* Стили для контейнера чекбокса */
+.form-checkbox {
+    display: flex; /* Используем flexbox */
+    align-items: center; /* Выравниваем элементы по центру */
+    margin-bottom: 1rem; /* Устанавливаем нижний отступ */
+}
+
+/* Стили для контейнера радиокнопок */
+.radio-group {
+    display: flex; /* Используем flexbox */
+    gap: 1rem; /* Устанавливаем отступ между элементами */
+    margin-bottom: 1rem; /* Устанавливаем нижний отступ */
+}
+
+/* Стили для контейнера радиокнопки */
+.form-radio {
+    display: flex; /* Используем flexbox */
+    align-items: center; /* Выравниваем элементы по центру */
+}
+
+/* Стили для кнопок формы */
+form button {
+    margin-right: 1rem; /* Устанавливаем правый отступ */
+}
+
+/* Стили для кнопки сброса */
+button[type="reset"] {
+    background-color: #ddd; /* Устанавливаем серый цвет фона */
+    color: #333; /* Устанавливаем темный цвет текста */
+}
+
+/* Стили при наведении на кнопку сброса */
+button[type="reset"]:hover {
+    background-color: #ccc; /* Устанавливаем цвет фона при наведении */
+}
+
+/* Стили для изображений */
+img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+/* Стили для таблиц */
+table {
+    width: auto;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 6px;
+    text-align: left;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Стили для ссылок */
+a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    color: #2c3e50;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff7f00;
+}
+
+/* Стили для списков */
+ul {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 800px) {
+    #about img {
+        width: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        text-align: center;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        font-size: 1.35em;
+    }
+    #about img {
+        width: 100%;
+    }
+    table, th, td {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 400px) {
+    table, th, td {
+        font-size: 0.8em;
+    }
+} 

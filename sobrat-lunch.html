@@ -1,0 +1,170 @@
+<!DOCTYPE html> <!-- Объявление типа документа -->
+<html lang="ru"> <!-- Основной тег HTML с указанием языка -->
+<head> <!-- Начало секции head -->
+    <meta charset="UTF-8"> <!-- Установка кодировки UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Настройка адаптивности -->
+    <title>Собрать ланч | Меню компании</title> <!-- Заголовок страницы -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Предварительное подключение к Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Предварительное подключение к Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"> <!-- Подключение шрифта Montserrat -->
+    <link rel="stylesheet" href="style-glavnoy.css"> <!-- Подключение основного CSS файла -->
+    <link rel="stylesheet" href="styles-lunch.css"> <!-- Подключение CSS файла для страницы ланча -->
+</head> <!-- Конец секции head -->
+<body> <!-- Начало тела документа -->
+    <header> <!-- Шапка сайта -->
+        <h1>Собрать ланч</h1> <!-- Главный заголовок -->
+        <nav> <!-- Навигационное меню -->
+            <a href="glavnaya.html">Главная</a> <!-- Ссылка на главную страницу -->
+            <a href="#about">О компании</a> <!-- Ссылка на секцию "О компании" -->
+            <a href="#advantages">Преимущества</a> <!-- Ссылка на секцию "Преимущества" -->
+            <a href="#menu">Меню</a> <!-- Ссылка на секцию "Меню" -->
+            <a href="#contacts">Контакты</a> <!-- Ссылка на секцию "Контакты" -->
+            <a href="sobrat-lunch.html" id="active">Собрать ланч</a> <!-- Ссылка на текущую страницу -->
+        </nav> <!-- Конец навигационного меню -->
+    </header> <!-- Конец шапки сайта -->
+    <main> <!-- Начало основного контента -->
+        <section id="soups"> <!-- Секция с супами -->
+            <h2>Супы</h2> <!-- Заголовок секции -->
+            <div class="filters"> <!-- Контейнер для фильтров -->
+                <button type="button" class="filter-btn" data-kind="fish">рыбный</button> <!-- Кнопка фильтра для рыбных супов -->
+                <button type="button" class="filter-btn" data-kind="meat">мясной</button> <!-- Кнопка фильтра для мясных супов -->
+                <button type="button" class="filter-btn" data-kind="vegetarian">вегетарианский</button> <!-- Кнопка фильтра для вегетарианских супов -->
+            </div> <!-- Конец контейнера фильтров -->
+            <div class="menu-items"></div> <!-- Контейнер для отображения блюд -->
+        </section> <!-- Конец секции с супами -->
+        <section id="main-dishes"> <!-- Секция с основными блюдами -->
+            <h2>Главные блюда</h2> <!-- Заголовок секции -->
+            <div class="filters"> <!-- Контейнер для фильтров -->
+                <button type="button" class="filter-btn" data-kind="fish">рыбное</button> <!-- Кнопка фильтра для рыбных блюд -->
+                <button type="button" class="filter-btn" data-kind="meat">мясное</button> <!-- Кнопка фильтра для мясных блюд -->
+                <button type="button" class="filter-btn" data-kind="vegetarian">вегетарианское</button> <!-- Кнопка фильтра для вегетарианских блюд -->
+            </div> <!-- Конец контейнера фильтров -->
+            <div class="menu-items"></div> <!-- Контейнер для отображения блюд -->
+        </section> <!-- Конец секции с основными блюдами -->
+        <section id="drinks"> <!-- Секция с напитками -->
+            <h2>Напитки</h2> <!-- Заголовок секции -->
+            <div class="filters"> <!-- Контейнер для фильтров -->
+                <button type="button" class="filter-btn" data-kind="cold">холодный</button> <!-- Кнопка фильтра для холодных напитков -->
+                <button type="button" class="filter-btn" data-kind="hot">горячий</button> <!-- Кнопка фильтра для горячих напитков -->
+            </div> <!-- Конец контейнера фильтров -->
+            <div class="menu-items"></div> <!-- Контейнер для отображения напитков -->
+        </section> <!-- Конец секции с напитками -->
+        <section id="salads"> <!-- Секция с салатами -->
+            <h2>Салаты и стартеры</h2> <!-- Заголовок секции -->
+            <div class="filters"> <!-- Контейнер для фильтров -->
+                <button type="button" class="filter-btn" data-kind="fish">рыбный</button> <!-- Кнопка фильтра для рыбных салатов -->
+                <button type="button" class="filter-btn" data-kind="meat">мясной</button> <!-- Кнопка фильтра для мясных салатов -->
+                <button type="button" class="filter-btn" data-kind="vegetarian">вегетарианский</button> <!-- Кнопка фильтра для вегетарианских салатов -->
+            </div> <!-- Конец контейнера фильтров -->
+            <div class="menu-items"></div> <!-- Контейнер для отображения салатов -->
+        </section> <!-- Конец секции с салатами -->
+        <section id="desserts"> <!-- Секция с десертами -->
+            <h2>Десерты</h2> <!-- Заголовок секции -->
+            <div class="filters"> <!-- Контейнер для фильтров -->
+                <button type="button" class="filter-btn" data-kind="small">маленькая порция</button> <!-- Кнопка фильтра для маленьких порций -->
+                <button type="button" class="filter-btn" data-kind="medium">средняя порция</button> <!-- Кнопка фильтра для средних порций -->
+                <button type="button" class="filter-btn" data-kind="large">большая порция</button> <!-- Кнопка фильтра для больших порций -->
+            </div> <!-- Конец контейнера фильтров -->
+            <div class="menu-items"></div> <!-- Контейнер для отображения десертов -->
+        </section> <!-- Конец секции с десертами -->
+    </main> <!-- Конец основного контента -->
+    <section id="order-form-section"> <!-- Секция с формой заказа -->
+        <h2>Оформить заказ</h2> <!-- Заголовок секции -->
+        <form action="https://httpbin.org/post" method="post"> <!-- Форма заказа -->
+            <fieldset> <!-- Группа полей для заказа -->
+                <legend>Ваш заказ</legend> <!-- Заголовок группы полей -->
+                <label for="soup">Суп:</label> <!-- Метка для выбора супа -->
+                <select name="soup" id="soup" required> <!-- Выпадающий список супов -->
+                    <option value="">Выберите суп</option> <!-- Плейсхолдер -->
+                    <option value="gaspacho">Гаспачо</option> <!-- Вариант супа -->
+                    <option value="mushroom_puree">Грибной суп-пюре</option> <!-- Вариант супа -->
+                    <option value="norwegian">Норвежский суп</option> <!-- Вариант супа -->
+                    <option value="ramen">Рамен</option> <!-- Вариант супа -->
+                    <option value="tom_yam">Том ям с креветками</option> <!-- Вариант супа -->
+                    <option value="chicken_soup">Куриный суп</option> <!-- Вариант супа -->
+                </select><br> <!-- Конец списка супов -->
+                <label for="main">Главное блюдо:</label> <!-- Метка для выбора основного блюда -->
+                <select name="main" id="main" required> <!-- Выпадающий список основных блюд -->
+                    <option value="">Выберите главное блюдо</option> <!-- Плейсхолдер -->
+                    <option value="chicken_cutlet">Котлеты из курицы с картофельным пюре</option> <!-- Вариант блюда -->
+                    <option value="lasagna">Лазанья</option> <!-- Вариант блюда -->
+                    <option value="fried_potatoes">Жареная картошка с грибами</option> <!-- Вариант блюда -->
+                    <option value="fish_cutlet">Рыбная котлета с рисом и спаржей</option> <!-- Вариант блюда -->
+                    <option value="pizza_margarita">Пицца Маргарита</option> <!-- Вариант блюда -->
+                    <option value="shrimp_pasta">Паста с креветками</option> <!-- Вариант блюда -->
+                </select><br> <!-- Конец списка основных блюд -->
+                <label for="salad">Салат/стартер:</label> <!-- Метка для выбора салата -->
+                <select name="salad" id="salad" required> <!-- Выпадающий список салатов -->
+                    <option value="">Выберите салат или стартер</option> <!-- Плейсхолдер -->
+                    <option value="korean_salad">Корейский салат с овощами и яйцом</option> <!-- Вариант салата -->
+                    <option value="caesar_chicken">Цезарь с цыпленком</option> <!-- Вариант салата -->
+                    <option value="caprese">Капрезе с моцареллой</option> <!-- Вариант салата -->
+                    <option value="tuna_salad">Салат с тунцом</option> <!-- Вариант салата -->
+                    <option value="fries_caesar">Картофель фри с соусом Цезарь</option> <!-- Вариант салата -->
+                    <option value="fries_ketchup">Картофель фри с кетчупом</option> <!-- Вариант салата -->
+                </select><br> <!-- Конец списка салатов -->
+                <label for="drink">Напиток:</label> <!-- Метка для выбора напитка -->
+                <select name="drink" id="drink" required> <!-- Выпадающий список напитков -->
+                    <option value="">Выберите напиток</option> <!-- Плейсхолдер -->
+                    <option value="carrot_juice">Морковный сок</option> <!-- Вариант напитка -->
+                    <option value="apple_juice">Яблочный сок</option> <!-- Вариант напитка -->
+                    <option value="orange_juice">Апельсиновый сок</option> <!-- Вариант напитка -->
+                    <option value="cappuccino">Капучино</option> <!-- Вариант напитка -->
+                    <option value="green_tea">Зеленый чай</option> <!-- Вариант напитка -->
+                    <option value="black_tea">Черный чай</option> <!-- Вариант напитка -->
+                </select><br> <!-- Конец списка напитков -->
+                <label for="dessert">Десерт:</label> <!-- Метка для выбора десерта -->
+                <select name="dessert" id="dessert" required> <!-- Выпадающий список десертов -->
+                    <option value="">Выберите десерт</option> <!-- Плейсхолдер -->
+                    <option value="baklava">Пахлава</option> <!-- Вариант десерта -->
+                    <option value="cheesecake">Чизкейк</option> <!-- Вариант десерта -->
+                    <option value="choco_cheesecake">Шоколадный чизкейк</option> <!-- Вариант десерта -->
+                    <option value="choco_cake">Шоколадный торт</option> <!-- Вариант десерта -->
+                    <option value="donuts3">Пончики (3 штуки)</option> <!-- Вариант десерта -->
+                    <option value="donuts6">Пончики (6 штук)</option> <!-- Вариант десерта -->
+                </select><br> <!-- Конец списка десертов -->
+                <label for="comment">Комментарий к заказу:</label><br> <!-- Метка для комментария -->
+                <textarea name="comment" id="comment" rows="3" cols="30" placeholder="Ваши пожелания..."></textarea> <!-- Поле для комментария -->
+            </fieldset> <!-- Конец группы полей для заказа -->
+            <fieldset> <!-- Группа полей для данных клиента -->
+                <legend>Данные клиента</legend> <!-- Заголовок группы полей -->
+                <label for="name">Имя:</label> <!-- Метка для имени -->
+                <input type="text" id="name" name="name" required><br> <!-- Поле для ввода имени -->
+                <label for="email">Email:</label> <!-- Метка для email -->
+                <input type="email" id="email" name="email" required><br> <!-- Поле для ввода email -->
+                <div class="form-checkbox"> <!-- Контейнер для чекбокса -->
+                    <input type="checkbox" id="subscribe" name="subscribe" checked> <!-- Чекбокс для подписки -->
+                    <label for="subscribe">Я согласен получать информацию о новинках и акциях</label> <!-- Метка для чекбокса -->
+                </div> <!-- Конец контейнера для чекбокса -->
+                <label for="phone">Телефон:</label> <!-- Метка для телефона -->
+                <input type="tel" id="phone" name="phone" required><br> <!-- Поле для ввода телефона -->
+                <label for="address">Адрес:</label> <!-- Метка для адреса -->
+                <input type="text" id="address" name="address" required><br> <!-- Поле для ввода адреса -->
+                <span>Время доставки:</span> <!-- Текст для выбора времени доставки -->
+                <div class="radio-group"> <!-- Контейнер для радиокнопок -->
+                    <div class="form-radio"> <!-- Контейнер для радиокнопки -->
+                        <input type="radio" id="asap" name="delivery_time_type" value="asap" required> <!-- Радиокнопка "Как можно скорее" -->
+                        <label for="asap">Как можно скорее</label> <!-- Метка для радиокнопки -->
+                    </div> <!-- Конец контейнера для радиокнопки -->
+                    <div class="form-radio"> <!-- Контейнер для радиокнопки -->
+                        <input type="radio" id="settime" name="delivery_time_type" value="settime" required> <!-- Радиокнопка "Указать время" -->
+                        <label for="settime">Указать время</label> <!-- Метка для радиокнопки -->
+                    </div> <!-- Конец контейнера для радиокнопки -->
+                </div> <!-- Конец контейнера для радиокнопок -->
+                <label for="delivery_time">Время доставки:</label> <!-- Метка для времени доставки -->
+                <input type="time" id="delivery_time" name="delivery_time" min="07:00" max="23:00" step="300"> <!-- Поле для ввода времени -->
+            </fieldset> <!-- Конец группы полей для данных клиента -->
+            <button type="reset">Сбросить</button> <!-- Кнопка сброса формы -->
+            <button type="submit">Отправить</button> <!-- Кнопка отправки формы -->
+        </form> <!-- Конец формы заказа -->
+    </section> <!-- Конец секции с формой заказа -->
+    <footer> <!-- Подвал сайта -->
+        <p>Контактные данные:</p> <!-- Заголовок контактной информации -->
+        <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p> <!-- Телефон -->
+        <p>Email: <a href="mailto:info@businesslunch.ru">info@businesslunch.ru</a></p> <!-- Email -->
+        <p>Адрес: г. Москва, ул. Примерная, д. 1</p> <!-- Адрес -->
+    </footer> <!-- Конец подвала сайта -->
+    <script src="menu-data.js"></script> <!-- Подключение файла с данными меню -->
+    <script src="menu-render.js"></script> <!-- Подключение файла для отображения меню -->
+</body> <!-- Конец тела документа -->
+</html> <!-- Конец HTML документа --> 
