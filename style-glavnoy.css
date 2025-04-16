@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Стили для блоков */
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 30px;
+    
+}
+
+main {
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #ff7f00;
+}
+
+footer a:hover {
+    color: #ffa500;
+}
+
+/* Стили для навигации */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+nav a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav a#active {
+    color: tomato;
+    font-weight: 700;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Стили для текста */
+h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* Стили для изображений */
+img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+/* Стили для таблиц */
+table {
+    width: auto;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 6px;
+    text-align: left;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Стили для ссылок */
+a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    color: #2c3e50;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff7f00;
+}
+
+/* Стили для списков */
+ul {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* Адаптивность для главной страницы */
+@media (max-width: 800px) {
+    #about img {
+        width: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        text-align: center;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        font-size: 1.35em;
+    }
+    #about img {
+        width: 100%;
+    }
+    table, th, td {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 400px) {
+    table, th, td {
+        font-size: 0.8em;
+    }
+} 
