@@ -1,0 +1,146 @@
+<!-- Объявление типа документа как HTML5 -->
+<!DOCTYPE html>
+<!-- Открытие тега html с указанием языка страницы -->
+<html lang="ru">
+<!-- Начало секции head с мета-информацией -->
+<head>
+    <!-- Указание кодировки документа -->
+    <meta charset="UTF-8">
+    <!-- Настройка viewport для адаптивности -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Заголовок страницы во вкладке браузера -->
+    <title>Собрать ланч | Меню компании</title>
+    <!-- Подключение Google шрифта Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Подключение CSS файлов -->
+    <link rel="stylesheet" href="style-glavnoy.css">
+    <link rel="stylesheet" href="styles-lunch.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <!-- Основной заголовок страницы -->
+        <h1>Собрать ланч</h1>
+        <!-- Навигационное меню -->
+        <nav>
+            <a href="glavnaya.html">Главная</a>
+            <a href="#about">О компании</a>
+            <a href="#advantages">Преимущества</a>
+            <a href="#menu">Меню</a>
+            <a href="#contacts">Контакты</a>
+            <!-- Активная ссылка текущей страницы -->
+            <a href="sobrat-lunch.html" id="active">Собрать ланч</a>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <!-- Секция с супами -->
+        <section id="soups">
+            <h2>Супы</h2>
+            <!-- Контейнер для карточек супов -->
+            <div class="menu-items">
+                <!-- Карточка блюда - Гаспачо -->
+                <div class="menu-item">
+                    <img src="Гаспачо.png" alt="Гаспачо" width="150">
+                    <p>Гаспачо</p>
+                    <p>250 мл</p>
+                    <p>200 руб.</p>
+                    <button>Добавить</button>
+                </div>
+                <!-- Карточка блюда - Грибной суп -->
+                <div class="menu-item">
+                    <img src="Грибной-суп-пюре.png" alt="Грибной суп-пюре" width="150">
+                    <p>Грибной суп-пюре</p>
+                    <p>300 мл</p>
+                    <p>220 руб.</p>
+                    <button>Добавить</button>
+                </div>
+                <!-- Карточка блюда - Норвежский суп -->
+                <div class="menu-item">
+                    <img src="Норвежский-суп.png" alt="Норвежский суп" width="150">
+                    <p>Норвежский суп</p>
+                    <p>300 мл</p>
+                    <p>250 руб.</p>
+                    <button>Добавить</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с основными блюдами -->
+        <section id="main-dishes">
+            <h2>Главные блюда</h2>
+            <!-- Контейнер для карточек основных блюд -->
+            <div class="menu-items">
+                <!-- Карточка блюда - Котлеты -->
+                <div class="menu-item">
+                    <img src="Котлеты-из-курицы-с-картофельным-пюре.png" alt="Котлеты из курицы с картофельным пюре" width="150">
+                    <p>Котлеты из курицы с картофельным пюре</p>
+                    <p>250 г</p>
+                    <p>350 руб.</p>
+                    <button>Добавить</button>
+                </div>
+                <!-- Карточка блюда - Лазанья -->
+                <div class="menu-item">
+                    <img src="Лазанья.png" alt="Лазанья" width="150">
+                    <p>Лазанья</p>
+                    <p>300 г</p>
+                    <p>400 руб.</p>
+                    <button>Добавить</button>
+                </div>
+                <!-- Карточка блюда - Жареная картошка -->
+                <div class="menu-item">
+                    <img src="Жареная-картошка-с-грибами.png" alt="Жареная картошка с грибами" width="150">
+                    <p>Жареная картошка с грибами</p>
+                    <p>250 г</p>
+                    <p>300 руб.</p>
+                    <button>Добавить</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с напитками -->
+        <section id="drinks">
+            <h2>Напитки</h2>
+            <!-- Контейнер для карточек напитков -->
+            <div class="menu-items">
+                <!-- Карточка напитка - Морковный сок -->
+                <div class="menu-item">
+                    <img src="Морковный-сок.png" alt="Морковный сок" width="150">
+                    <p>Морковный сок</p>
+                    <p>200 мл</p>
+                    <p>100 руб.</p>
+                    <button>Добавить</button>
+                </div>
+                <!-- Карточка напитка - Яблочный сок -->
+                <div class="menu-item">
+                    <img src="Яблочный-сок.png" alt="Яблочный сок" width="150">
+                    <p>Яблочный сок</p>
+                    <p>200 мл</p>
+                    <p>100 руб.</p>
+                    <button>Добавить</button>
+                </div>
+                <!-- Карточка напитка - Апельсиновый сок -->
+                <div class="menu-item">
+                    <img src="Апельсиновый-сок.png" alt="Апельсиновый сок" width="150">
+                    <p>Апельсиновый сок</p>
+                    <p>200 мл</p>
+                    <p>120 руб.</p>
+                    <button>Добавить</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>Контактные данные:</p>
+        <!-- Контактная информация -->
+        <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+        <p>Email: <a href="mailto:info@businesslunch.ru">info@businesslunch.ru</a></p>
+        <p>Адрес: г. Москва, ул. Примерная, д. 1</p>
+    </footer>
+</body>
+</html> 

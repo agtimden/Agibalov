@@ -1,0 +1,117 @@
+/* Стили для сетки меню - использование Grid для расположения карточек в 3 колонки */
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Создание 3 равных колонок */
+    gap: 10px; /* Отступ между карточками */
+}
+
+/* Стили для карточки блюда - использование Flex для вертикального расположения элементов */
+.menu-item {
+    display: flex;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    align-items: center; /* Центрирование элементов по горизонтали */
+    padding: 30px 40px; /* Внутренние отступы */
+    border-radius: 35px; /* Скругление углов */
+    background: #fff; /* Белый фон */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13)); /* Тень для карточки */
+    transition: border 0.2s, box-shadow 0.2s; /* Анимация при наведении */
+    border: 2px solid transparent; /* Прозрачная граница по умолчанию */
+}
+
+/* Эффект при наведении на карточку */
+.menu-item:hover {
+    border: 2px solid tomato; /* Красная граница при наведении */
+}
+
+/* Стили для изображений в карточках */
+.menu-item img {
+    width: 100%; /* Изображение на всю ширину карточки */
+    border-radius: 35px; /* Скругление углов */
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+/* Стили для названия блюда */
+.menu-item p:nth-child(3) {
+    font-size: 1.3em; /* Увеличенный размер шрифта */
+    font-weight: 600; /* Полужирный шрифт */
+    margin-bottom: 5px;
+}
+
+/* Стили для веса/объема */
+.menu-item p:nth-child(4) {
+    color: #888; /* Серый цвет текста */
+    margin-bottom: 5px;
+}
+
+/* Стили для цены */
+.menu-item p:nth-child(5) {
+    font-size: 1.2em; /* Увеличенный размер шрифта */
+    font-weight: 700; /* Жирный шрифт */
+    margin-bottom: 10px;
+}
+
+/* Стили для кнопки "Добавить" */
+.menu-item button {
+    background: #f1eee9; /* Светлый фон */
+    color: #2c3e50; /* Тёмный цвет текста */
+    border: none;
+    border-radius: 10px; /* Скругление углов */
+    padding: 10px 30px; /* Внутренние отступы */
+    font-size: 1em;
+    margin-top: 20px; /* Отступ сверху */
+    cursor: pointer;
+    transition: background 0.2s; /* Анимация при наведении */
+}
+
+/* Эффект при наведении на кнопку внутри карточки */
+.menu-item:hover button {
+    background: tomato; /* Красный фон при наведении */
+    color: #fff; /* Белый текст */
+}
+
+/* Стили для навигации - использование Flex */
+nav {
+    display: flex;
+    flex-wrap: wrap; /* Перенос элементов на новую строку */
+    gap: 15px; /* Отступ между элементами */
+    margin-top: 20px;
+}
+
+/* Стили для ссылок в навигации */
+nav a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    transition: color 0.3s ease; /* Плавное изменение цвета */
+}
+
+/* Стили для активной ссылки */
+nav a#active {
+    color: tomato; /* Красный цвет для активной страницы */
+    font-weight: 700; /* Жирный шрифт */
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 800px) {
+    section > h2 {
+        text-align: center; /* Заголовки по центру */
+    }
+    .menu-items {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки вместо 3 */
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+    section > h2 {
+        text-align: center;
+    }
+    .menu-items {
+        grid-template-columns: 1fr; /* 1 колонка */
+    }
+    .menu-item {
+        padding: 20px 10px; /* Уменьшенные отступы */
+    }
+} 
