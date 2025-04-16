@@ -1,0 +1,815 @@
+/* Основные стили для сетки меню */
+.menu-items {
+    /* Создание сетки с тремя колонками */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Отступы между элементами */
+    gap: 10px;
+    /* Внешний отступ сверху */
+    margin-top: 20px;
+}
+
+/* Стили для карточки блюда */
+.menu-item {
+    /* Флекс-контейнер с вертикальным направлением */
+    display: flex;
+    flex-direction: column;
+    /* Выравнивание по центру */
+    align-items: center;
+    /* Внутренние отступы */
+    padding: 30px 40px;
+    /* Скругление углов */
+    border-radius: 35px;
+    /* Белый фон */
+    background: #fff;
+    /* Курсор-указатель */
+    cursor: pointer;
+    /* Тень */
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    /* Анимация при наведении */
+    transition: border 0.2s, box-shadow 0.2s;
+    /* Прозрачная граница */
+    border: 2px solid transparent;
+}
+
+/* Эффект при наведении на карточку блюда */
+.menu-item:hover {
+    /* Красная граница при наведении */
+    border: 2px solid tomato;
+}
+
+/* Стили для изображения в карточке блюда */
+.menu-item img {
+    /* Ширина 100% от родителя */
+    width: 100%;
+    /* Скругление углов */
+    border-radius: 35px;
+    /* Отступ снизу */
+    margin-bottom: 15px;
+}
+
+/* Стили для названия блюда */
+.menu-item p:nth-child(3) {
+    /* Размер шрифта */
+    font-size: 1.3em;
+    /* Жирный шрифт */
+    font-weight: 600;
+    /* Отступ снизу */
+    margin-bottom: 5px;
+}
+
+/* Стили для веса/объема блюда */
+.menu-item p:nth-child(4) {
+    /* Серый цвет текста */
+    color: #888;
+    /* Отступ снизу */
+    margin-bottom: 5px;
+}
+
+/* Стили для цены блюда */
+.menu-item p:nth-child(5) {
+    /* Размер шрифта */
+    font-size: 1.2em;
+    /* Жирный шрифт */
+    font-weight: 700;
+    /* Отступ снизу */
+    margin-bottom: 10px;
+}
+
+/* Стили для кнопки добавления в заказ */
+.menu-item button {
+    /* Светло-серый фон */
+    background: #f1eee9;
+    /* Темно-синий цвет текста */
+    color: #2c3e50;
+    /* Удаление границы */
+    border: none;
+    /* Скругление углов */
+    border-radius: 10px;
+    /* Внутренние отступы */
+    padding: 10px 30px;
+    /* Размер шрифта */
+    font-size: 1em;
+    /* Отступ сверху */
+    margin-top: 20px;
+    /* Курсор-указатель */
+    cursor: pointer;
+    /* Анимация при наведении */
+    transition: background 0.2s;
+}
+
+/* Эффект при наведении на кнопку */
+.menu-item:hover button {
+    /* Красный фон при наведении */
+    background: tomato;
+    /* Белый цвет текста */
+    color: #fff;
+}
+
+/* Стили для навигационного меню */
+nav {
+    /* Флекс-контейнер */
+    display: flex;
+    /* Перенос на новую строку */
+    flex-wrap: wrap;
+    /* Отступы между элементами */
+    gap: 15px;
+    /* Отступ сверху */
+    margin-top: 20px;
+}
+
+/* Стили для ссылок в навигации */
+nav a {
+    /* Темно-синий цвет текста */
+    color: #2c3e50;
+    /* Удаление подчеркивания */
+    text-decoration: none;
+    /* Шрифт Montserrat */
+    font-family: 'Montserrat', sans-serif;
+    /* Размер шрифта */
+    font-size: 1.1em;
+    /* Анимация при наведении */
+    transition: color 0.3s ease;
+}
+
+/* Стили для активной ссылки в навигации */
+nav a#active {
+    /* Красный цвет текста */
+    color: tomato;
+    /* Жирный шрифт */
+    font-weight: 700;
+}
+
+/* Адаптивность для экранов шириной до 800px */
+@media (max-width: 800px) {
+    /* Выравнивание заголовков по центру */
+    section > h2 {
+        text-align: center;
+    }
+    /* Две колонки в сетке */
+    .menu-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Адаптивность для экранов шириной до 600px */
+@media (max-width: 600px) {
+    /* Выравнивание заголовков по центру */
+    section > h2 {
+        text-align: center;
+    }
+    /* Одна колонка в сетке */
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+    /* Уменьшение отступов */
+    .menu-item {
+        padding: 20px 10px;
+    }
+}
+
+/* Стили для секции формы заказа */
+#order-form-section {
+    /* Максимальная ширина */
+    max-width: 1200px;
+    /* Центрирование */
+    margin: 40px auto 0 auto;
+    /* Белый фон */
+    background: #fff;
+    /* Скругление углов */
+    border-radius: 20px;
+    /* Тень */
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    /* Внутренние отступы */
+    padding: 50px 60px 40px 60px;
+}
+
+/* Стили для заголовка формы */
+#order-form-section h2 {
+    /* Выравнивание по центру */
+    text-align: center;
+    /* Размер шрифта */
+    font-size: 2em;
+    /* Жирный шрифт */
+    font-weight: 700;
+    /* Отступ снизу */
+    margin-bottom: 30px;
+}
+
+/* Стили для формы */
+#order-form-section form {
+    /* Флекс-контейнер */
+    display: flex;
+    /* Отступы между элементами */
+    gap: 40px;
+    /* Выравнивание по центру */
+    justify-content: center;
+    /* Выравнивание по верхнему краю */
+    align-items: flex-start;
+}
+
+/* Стили для fieldset */
+#order-form-section fieldset {
+    /* Удаление границы */
+    border: none;
+    /* Удаление отступов */
+    padding: 0;
+    /* Минимальная ширина */
+    min-width: 320px;
+    /* Ширина 100% */
+    width: 100%;
+}
+
+/* Стили для легенды fieldset */
+#order-form-section legend {
+    /* Размер шрифта */
+    font-size: 1.2em;
+    /* Жирный шрифт */
+    font-weight: 600;
+    /* Отступ снизу */
+    margin-bottom: 18px;
+    /* Выравнивание по левому краю */
+    text-align: left;
+}
+
+/* Стили для меток формы */
+#order-form-section label {
+    /* Блочный элемент */
+    display: block;
+    /* Размер шрифта */
+    font-size: 1em;
+    /* Средний шрифт */
+    font-weight: 500;
+    /* Отступ снизу */
+    margin-bottom: 6px;
+    /* Отступ сверху */
+    margin-top: 18px;
+}
+
+/* Стили для полей ввода */
+#order-form-section input[type="text"],
+#order-form-section input[type="email"],
+#order-form-section input[type="tel"],
+#order-form-section input[type="time"],
+#order-form-section select,
+#order-form-section textarea {
+    /* Ширина 100% */
+    width: 100%;
+    /* Размер шрифта */
+    font-size: 1em;
+    /* Внутренние отступы */
+    padding: 10px 12px;
+    /* Серая граница */
+    border: 1.5px solid #e0e0e0;
+    /* Скругление углов */
+    border-radius: 10px;
+    /* Отступ снизу */
+    margin-bottom: 6px;
+    /* Светло-серый фон */
+    background: #fafafa;
+    /* Шрифт Montserrat */
+    font-family: 'Montserrat', sans-serif;
+    /* Учет границ в размере */
+    box-sizing: border-box;
+    /* Анимация при фокусе */
+    transition: border 0.2s;
+}
+
+/* Стили для фокуса на полях ввода */
+#order-form-section input[type="text"]:focus,
+#order-form-section input[type="email"]:focus,
+#order-form-section input[type="tel"]:focus,
+#order-form-section input[type="time"]:focus,
+#order-form-section select:focus,
+#order-form-section textarea:focus {
+    /* Красная граница при фокусе */
+    border: 1.5px solid #ff6347;
+    /* Удаление стандартного контура */
+    outline: none;
+}
+
+/* Стили для текстовой области */
+#order-form-section textarea {
+    /* Минимальная высота */
+    min-height: 70px;
+    /* Возможность изменения размера только по вертикали */
+    resize: vertical;
+}
+
+/* Стили для чекбоксов и радио-кнопок */
+#order-form-section input[type="checkbox"] + label,
+#order-form-section input[type="radio"] + label {
+    /* Строчно-блочный элемент */
+    display: inline-block;
+    /* Выравнивание по вертикали */
+    vertical-align: middle;
+    /* Удаление отступов */
+    margin-top: 0;
+    margin-bottom: 0;
+    /* Обычный шрифт */
+    font-weight: 400;
+    /* Размер шрифта */
+    font-size: 1em;
+}
+
+/* Стили для чекбоксов */
+#order-form-section input[type="checkbox"] {
+    /* Отступ справа */
+    margin-right: 7px;
+    /* Красный цвет при выборе */
+    accent-color: #ff6347;
+    /* Выравнивание по вертикали */
+    vertical-align: middle;
+    /* Удаление отступов */
+    margin-top: 0;
+}
+
+/* Стили для радио-кнопок */
+#order-form-section input[type="radio"] {
+    /* Красный цвет при выборе */
+    accent-color: #ff6347;
+    /* Отступ справа */
+    margin-right: 5px;
+    /* Удаление отступа слева */
+    margin-left: 0;
+    /* Выравнивание по вертикали */
+    vertical-align: middle;
+    /* Удаление отступа сверху */
+    margin-top: 0;
+}
+
+/* Стили для группы радио-кнопок */
+#order-form-section .radio-group {
+    /* Отступ снизу */
+    margin-bottom: 10px;
+}
+
+/* Стили для информационного текста */
+#order-form-section .info-text {
+    /* Размер шрифта */
+    font-size: 0.95em;
+    /* Серый цвет текста */
+    color: #888;
+    /* Отступ снизу */
+    margin-bottom: 10px;
+    /* Удаление отступа сверху */
+    margin-top: 0;
+}
+
+/* Стили для кнопок формы */
+#order-form-section button[type="reset"],
+#order-form-section button[type="submit"] {
+    /* Размер шрифта */
+    font-size: 1em;
+    /* Шрифт Montserrat */
+    font-family: 'Montserrat', sans-serif;
+    /* Внутренние отступы */
+    padding: 10px 28px;
+    /* Скругление углов */
+    border-radius: 10px;
+    /* Удаление границы */
+    border: none;
+    /* Отступ сверху */
+    margin-top: 18px;
+    /* Отступ справа */
+    margin-right: 10px;
+    /* Светло-серый фон */
+    background: #f1eee9;
+    /* Темно-синий цвет текста */
+    color: #2c3e50;
+    /* Жирный шрифт */
+    font-weight: 600;
+    /* Курсор-указатель */
+    cursor: pointer;
+    /* Анимация при наведении */
+    transition: background 0.2s, color 0.2s;
+    /* Тень */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* Стили для кнопки отправки */
+#order-form-section button[type="submit"] {
+    /* Красный фон */
+    background: #ff6347;
+    /* Белый цвет текста */
+    color: #fff;
+}
+
+/* Эффект при наведении на кнопку сброса */
+#order-form-section button[type="reset"]:hover {
+    /* Темно-серый фон при наведении */
+    background: #e0e0e0;
+}
+
+/* Эффект при наведении на кнопку отправки */
+#order-form-section button[type="submit"]:hover {
+    /* Темно-красный фон при наведении */
+    background: #d94d2a;
+}
+
+/* Адаптивность для экранов шириной до 900px */
+@media (max-width: 900px) {
+    /* Вертикальное расположение элементов формы */
+    #order-form-section form {
+        flex-direction: column;
+        /* Удаление отступов */
+        gap: 0;
+    }
+    /* Удаление минимальной ширины */
+    #order-form-section fieldset {
+        min-width: unset;
+        /* Отступ снизу */
+        margin-bottom: 30px;
+    }
+}
+
+/* Стили для чекбоксов и радио-кнопок в форме */
+#order-form-section .form-checkbox,
+#order-form-section .form-radio {
+    /* Флекс-контейнер */
+    display: flex;
+    /* Выравнивание по центру */
+    align-items: center;
+    /* Отступ сверху */
+    margin-top: 18px;
+    /* Удаление отступа снизу */
+    margin-bottom: 0;
+    /* Отступ слева */
+    margin-left: 18px;
+}
+
+/* Стили для меток чекбоксов и радио-кнопок */
+#order-form-section .form-checkbox label,
+#order-form-section .form-radio label {
+    /* Удаление отступов */
+    margin: 0 0 0 8px;
+    /* Строчный элемент */
+    display: inline;
+    /* Обычный шрифт */
+    font-weight: 400;
+    /* Размер шрифта */
+    font-size: 1em;
+    /* Перенос текста */
+    white-space: normal;
+}
+
+/* Стили для радио-кнопок */
+#order-form-section .form-radio {
+    /* Отступ сверху */
+    margin-top: 8px;
+}
+
+/* Стили для группы радио-кнопок */
+#order-form-section .radio-group {
+    /* Отступ снизу */
+    margin-bottom: 10px;
+    /* Удаление отступа сверху */
+    margin-top: 0;
+}
+
+/* Стили для группы радио-кнопок */
+#order-form-section .radio-group {
+    /* Флекс-контейнер */
+    display: flex;
+    /* Вертикальное расположение */
+    flex-direction: column;
+    /* Удаление отступов */
+    gap: 0;
+}
+
+/* Стили для чекбоксов */
+#order-form-section input[type="checkbox"] {
+    /* Удаление отступов */
+    margin: 0;
+}
+
+/* Стили для радио-кнопок */
+#order-form-section input[type="radio"] {
+    /* Удаление отступов */
+    margin: 0;
+}
+
+/* Стили для блока с итоговой суммой */
+.order-total {
+    /* Отступ сверху */
+    margin-top: 18px;
+    /* Размер шрифта */
+    font-size: 1.15em;
+    /* Жирный шрифт */
+    font-weight: 700;
+    /* Темный цвет текста */
+    color: #222;
+    /* Выравнивание по левому краю */
+    text-align: left;
+}
+
+/* Адаптивность для экранов шириной до 1300px */
+@media (max-width: 1300px) {
+    /* Уменьшение максимальной ширины */
+    #order-form-section {
+        max-width: 98vw;
+        /* Уменьшение отступов */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Стили для фильтров */
+.filters {
+    /* Отступ снизу */
+    margin-bottom: 20px;
+    /* Флекс-контейнер */
+    display: flex;
+    /* Отступы между элементами */
+    gap: 10px;
+}
+
+/* Стили для кнопок фильтров */
+.filter-btn {
+    /* Внутренние отступы */
+    padding: 8px 16px;
+    /* Удаление границы */
+    border: none;
+    /* Скругление углов */
+    border-radius: 20px;
+    /* Светло-серый фон */
+    background: #f1eee9;
+    /* Темно-синий цвет текста */
+    color: #2c3e50;
+    /* Курсор-указатель */
+    cursor: pointer;
+    /* Размер шрифта */
+    font-size: 0.9em;
+    /* Анимация при наведении */
+    transition: all 0.2s;
+}
+
+/* Эффект при наведении на кнопку фильтра */
+.filter-btn:hover {
+    /* Темно-серый фон при наведении */
+    background: #e0e0e0;
+}
+
+/* Стили для активной кнопки фильтра */
+.filter-btn.active {
+    /* Красный фон */
+    background: #ff6347;
+    /* Белый цвет текста */
+    color: white;
+}
+
+/* Стили для блока с комбо */
+#available-combos {
+    /* Максимальная ширина */
+    max-width: 1200px;
+    /* Центрирование */
+    margin: 40px auto;
+    /* Внутренние отступы */
+    padding: 20px;
+}
+
+/* Стили для заголовка блока комбо */
+#available-combos h2 {
+    /* Выравнивание по центру */
+    text-align: center;
+    /* Размер шрифта */
+    font-size: 2em;
+    /* Отступ снизу */
+    margin-bottom: 40px;
+    /* Темно-синий цвет текста */
+    color: #2c3e50;
+}
+
+/* Стили для сетки комбо */
+.combo-grid {
+    /* Сетка с тремя колонками */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Отступы между элементами */
+    gap: 20px;
+    /* Отступ снизу */
+    margin-bottom: 40px;
+}
+
+/* Стили для элемента комбо */
+.combo-item {
+    /* Белый фон */
+    background: #fff;
+    /* Скругление углов */
+    border-radius: 15px;
+    /* Внутренние отступы */
+    padding: 30px 20px;
+    /* Тень */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* Скрытие заголовка комбо */
+.combo-item h3 {
+    /* Скрытие элемента */
+    display: none;
+}
+
+/* Стили для блюд в комбо */
+.combo-dishes {
+    /* Флекс-контейнер */
+    display: flex;
+    /* Горизонтальное расположение */
+    flex-direction: row;
+    /* Отступы между элементами */
+    gap: 30px;
+    /* Выравнивание по центру */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Стили для отдельного блюда в комбо */
+.combo-dish {
+    /* Флекс-контейнер */
+    display: flex;
+    /* Вертикальное расположение */
+    flex-direction: column;
+    /* Выравнивание по центру */
+    align-items: center;
+    /* Отступы между элементами */
+    gap: 10px;
+}
+
+/* Стили для изображения блюда в комбо */
+.combo-dish img {
+    /* Размер изображения */
+    width: 45px;
+    height: 45px;
+    /* Сохранение пропорций */
+    object-fit: contain;
+    /* Анимация при наведении */
+    transition: transform 0.3s ease;
+}
+
+/* Эффект при наведении на изображение блюда */
+.combo-dish:hover img {
+    /* Поднятие и увеличение изображения */
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* Стили для названия блюда в комбо */
+.combo-dish p {
+    /* Размер шрифта */
+    font-size: 0.85em;
+    /* Средний шрифт */
+    font-weight: 500;
+    /* Темно-синий цвет текста */
+    color: #2c3e50;
+    /* Выравнивание по центру */
+    text-align: center;
+}
+
+/* Стили для дополнительной информации о блюде */
+.combo-dish small {
+    /* Курсив */
+    font-style: italic;
+    /* Серый цвет текста */
+    color: #666;
+    /* Размер шрифта */
+    font-size: 0.85em;
+    /* Блочный элемент */
+    display: block;
+    /* Отрицательный отступ сверху */
+    margin-top: -5px;
+}
+
+/* Стили для информации о десерте */
+.dessert-info {
+    /* Выравнивание по центру */
+    text-align: center;
+    /* Отступ сверху */
+    margin-top: 40px;
+}
+
+/* Скрытие заголовка десерта */
+.dessert-info h3 {
+    /* Скрытие элемента */
+    display: none;
+}
+
+/* Стили для дополнительной информации о десерте */
+.dessert-info .combo-dish small {
+    /* Курсив */
+    font-style: italic;
+    /* Серый цвет текста */
+    color: #666;
+}
+
+/* Адаптивность для экранов шириной до 1024px */
+@media (max-width: 1024px) {
+    /* Две колонки в сетке */
+    .combo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Адаптивность для экранов шириной до 768px */
+@media (max-width: 768px) {
+    /* Одна колонка в сетке */
+    .combo-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Уменьшение отступов */
+    .combo-dishes {
+        gap: 20px;
+    }
+    
+    /* Уменьшение размера изображений */
+    .combo-dish img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Уменьшение размера шрифта */
+    .combo-dish p {
+        font-size: 0.8em;
+    }
+}
+
+/* Скрытие тултипов и оберток для select */
+.tooltip, .select-wrapper {
+    /* Скрытие элементов */
+    display: none !important;
+}
+
+/* Стили для оверлея уведомления */
+.notification-overlay {
+    /* Фиксированное позиционирование */
+    position: fixed;
+    /* Позиционирование сверху */
+    top: 0;
+    /* Позиционирование слева */
+    left: 0;
+    /* Ширина 100% */
+    width: 100%;
+    /* Высота 100% */
+    height: 100%;
+    /* Полупрозрачный черный фон */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Флекс-контейнер */
+    display: flex;
+    /* Выравнивание по центру */
+    justify-content: center;
+    align-items: center;
+    /* Высокий z-index */
+    z-index: 1000;
+}
+
+/* Стили для уведомления */
+.notification {
+    /* Белый фон */
+    background-color: white;
+    /* Внутренние отступы */
+    padding: 20px;
+    /* Скругление углов */
+    border-radius: 8px;
+    /* Тень */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Максимальная ширина */
+    max-width: 400px;
+    /* Ширина 90% */
+    width: 90%;
+    /* Выравнивание по центру */
+    text-align: center;
+}
+
+/* Стили для текста уведомления */
+.notification p {
+    /* Удаление отступов */
+    margin: 0 0 15px 0;
+    /* Размер шрифта */
+    font-size: 16px;
+    /* Темный цвет текста */
+    color: #333;
+}
+
+/* Стили для кнопки уведомления */
+.notification button {
+    /* Красный фон */
+    background-color: #ff6347;
+    /* Белый цвет текста */
+    color: white;
+    /* Удаление границы */
+    border: none;
+    /* Внутренние отступы */
+    padding: 10px 20px;
+    /* Скругление углов */
+    border-radius: 4px;
+    /* Курсор-указатель */
+    cursor: pointer;
+    /* Размер шрифта */
+    font-size: 14px;
+    /* Анимация при наведении */
+    transition: background-color 0.3s;
+}
+
+/* Эффект при наведении на кнопку уведомления */
+.notification button:hover {
+    /* Темно-красный фон при наведении */
+    background-color: #d94d2a;
+} 
