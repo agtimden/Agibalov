@@ -1,0 +1,384 @@
+/* Стили для сетки меню */
+.menu-items {
+    display: grid; /* Используем grid для создания сетки */
+    grid-template-columns: repeat(3, 1fr); /* Создаем 3 колонки равной ширины */
+    gap: 10px; /* Устанавливаем отступ между элементами */
+    margin-top: 20px; /* Устанавливаем верхний отступ */
+}
+
+/* Стили для карточки блюда */
+.menu-item {
+    display: flex; /* Используем flexbox для расположения элементов */
+    flex-direction: column; /* Располагаем элементы вертикально */
+    align-items: center; /* Выравниваем элементы по центру */
+    padding: 30px 40px; /* Устанавливаем внутренние отступы */
+    border-radius: 35px; /* Скругляем углы */
+    background: #fff; /* Устанавливаем белый фон */
+    cursor: pointer; /* Устанавливаем курсор pointer */
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13)); /* Добавляем тень */
+    transition: border 0.2s, box-shadow 0.2s; /* Добавляем плавный переход */
+    border: 2px solid transparent; /* Устанавливаем прозрачную границу */
+}
+
+/* Эффект при наведении на карточку */
+.menu-item:hover {
+    border: 2px solid tomato; /* Устанавливаем красную границу при наведении */
+}
+
+/* Стили для изображения в карточке */
+.menu-item img {
+    width: 100%; /* Занимаем всю доступную ширину */
+    border-radius: 35px; /* Скругляем углы */
+    margin-bottom: 15px; /* Устанавливаем нижний отступ */
+}
+
+/* Стили для названия блюда */
+.menu-item p:nth-child(3) {
+    font-size: 1.3em; /* Устанавливаем размер шрифта */
+    font-weight: 600; /* Устанавливаем жирность шрифта */
+    margin-bottom: 5px; /* Устанавливаем нижний отступ */
+}
+
+/* Стили для веса/объема блюда */
+.menu-item p:nth-child(4) {
+    color: #888; /* Устанавливаем серый цвет текста */
+    margin-bottom: 5px; /* Устанавливаем нижний отступ */
+}
+
+/* Стили для цены блюда */
+.menu-item p:nth-child(5) {
+    font-size: 1.2em; /* Устанавливаем размер шрифта */
+    font-weight: 700; /* Устанавливаем жирность шрифта */
+    margin-bottom: 10px; /* Устанавливаем нижний отступ */
+}
+
+/* Стили для кнопки добавления */
+.menu-item button {
+    background: #f1eee9; /* Устанавливаем цвет фона */
+    color: #2c3e50; /* Устанавливаем цвет текста */
+    border: none; /* Убираем границу */
+    border-radius: 10px; /* Скругляем углы */
+    padding: 10px 30px; /* Устанавливаем внутренние отступы */
+    font-size: 1em; /* Устанавливаем размер шрифта */
+    margin-top: 20px; /* Устанавливаем верхний отступ */
+    cursor: pointer; /* Устанавливаем курсор pointer */
+    transition: background 0.2s; /* Добавляем плавный переход */
+}
+
+/* Эффект при наведении на кнопку */
+.menu-item:hover button {
+    background: tomato; /* Устанавливаем красный цвет фона при наведении */
+    color: #fff; /* Устанавливаем белый цвет текста при наведении */
+}
+
+/* Стили для навигации */
+nav {
+    display: flex; /* Используем flexbox */
+    flex-wrap: wrap; /* Разрешаем перенос элементов */
+    gap: 15px; /* Устанавливаем отступ между элементами */
+    margin-top: 20px; /* Устанавливаем верхний отступ */
+}
+
+nav a {
+    color: #2c3e50; /* Устанавливаем цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-family: 'Montserrat', sans-serif; /* Устанавливаем шрифт */
+    font-size: 1.1em; /* Устанавливаем размер шрифта */
+    transition: color 0.3s ease; /* Добавляем плавный переход */
+}
+
+nav a#active {
+    color: tomato; /* Устанавливаем красный цвет для активной ссылки */
+    font-weight: 700; /* Устанавливаем жирность шрифта */
+}
+
+/* Адаптивность для страницы "Собрать ланч" */
+@media (max-width: 800px) {
+    section > h2 {
+        text-align: center; /* Выравниваем заголовки по центру */
+    }
+    .menu-items {
+        grid-template-columns: repeat(2, 1fr); /* Создаем 2 колонки на средних экранах */
+    }
+}
+
+@media (max-width: 600px) {
+    section > h2 {
+        text-align: center; /* Выравниваем заголовки по центру */
+    }
+    .menu-items {
+        grid-template-columns: 1fr; /* Создаем 1 колонку на маленьких экранах */
+    }
+    .menu-item {
+        padding: 20px 10px; /* Уменьшаем отступы на маленьких экранах */
+    }
+}
+
+/* Стили для секции формы заказа */
+#order-form-section {
+    max-width: 1200px; /* Устанавливаем максимальную ширину */
+    margin: 40px auto 0 auto; /* Центрируем секцию */
+    background: #fff; /* Устанавливаем белый фон */
+    border-radius: 20px; /* Скругляем углы */
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08); /* Добавляем тень */
+    padding: 50px 60px 40px 60px; /* Устанавливаем внутренние отступы */
+}
+
+/* Стили для заголовка формы */
+#order-form-section h2 {
+    text-align: center; /* Выравниваем текст по центру */
+    font-size: 2em; /* Устанавливаем размер шрифта */
+    font-weight: 700; /* Устанавливаем жирность шрифта */
+    margin-bottom: 30px; /* Устанавливаем нижний отступ */
+}
+
+/* Стили для формы */
+#order-form-section form {
+    display: flex; /* Используем flexbox */
+    gap: 40px; /* Устанавливаем отступ между элементами */
+    justify-content: center; /* Выравниваем элементы по центру */
+    align-items: flex-start; /* Выравниваем элементы по верхнему краю */
+}
+
+/* Стили для полей формы */
+#order-form-section fieldset {
+    border: none; /* Убираем границу */
+    padding: 0; /* Убираем внутренние отступы */
+    min-width: 320px; /* Устанавливаем минимальную ширину */
+    width: 100%; /* Занимаем всю доступную ширину */
+}
+
+/* Стили для легенды поля */
+#order-form-section legend {
+    font-size: 1.2em; /* Устанавливаем размер шрифта */
+    font-weight: 600; /* Устанавливаем жирность шрифта */
+    margin-bottom: 18px; /* Устанавливаем нижний отступ */
+    text-align: left; /* Выравниваем текст по левому краю */
+}
+
+/* Стили для меток полей */
+#order-form-section label {
+    display: block; /* Отображаем как блочный элемент */
+    font-size: 1em; /* Устанавливаем размер шрифта */
+    font-weight: 500; /* Устанавливаем жирность шрифта */
+    margin-bottom: 6px; /* Устанавливаем нижний отступ */
+    margin-top: 18px; /* Устанавливаем верхний отступ */
+}
+
+/* Стили для полей ввода */
+#order-form-section input[type="text"],
+#order-form-section input[type="email"],
+#order-form-section input[type="tel"],
+#order-form-section input[type="time"],
+#order-form-section select,
+#order-form-section textarea {
+    width: 100%; /* Занимаем всю доступную ширину */
+    font-size: 1em; /* Устанавливаем размер шрифта */
+    padding: 10px 12px; /* Устанавливаем внутренние отступы */
+    border: 1.5px solid #e0e0e0; /* Устанавливаем границу */
+    border-radius: 10px; /* Скругляем углы */
+    margin-bottom: 6px; /* Устанавливаем нижний отступ */
+    background: #fafafa; /* Устанавливаем цвет фона */
+    font-family: 'Montserrat', sans-serif; /* Устанавливаем шрифт */
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+    transition: border 0.2s; /* Добавляем плавный переход */
+}
+
+/* Стили для фокуса полей ввода */
+#order-form-section input[type="text"]:focus,
+#order-form-section input[type="email"]:focus,
+#order-form-section input[type="tel"]:focus,
+#order-form-section input[type="time"]:focus,
+#order-form-section select:focus,
+#order-form-section textarea:focus {
+    border: 1.5px solid #ff6347; /* Устанавливаем красную границу при фокусе */
+    outline: none; /* Убираем стандартный контур */
+}
+
+/* Стили для текстовой области */
+#order-form-section textarea {
+    min-height: 70px; /* Устанавливаем минимальную высоту */
+    resize: vertical; /* Разрешаем изменение высоты */
+}
+
+/* Стили для чекбоксов и радиокнопок */
+#order-form-section input[type="checkbox"] + label,
+#order-form-section input[type="radio"] + label {
+    display: inline-block; /* Отображаем как строчно-блочный элемент */
+    vertical-align: middle; /* Выравниваем по вертикали */
+    margin-top: 0; /* Убираем верхний отступ */
+    margin-bottom: 0; /* Убираем нижний отступ */
+    font-weight: 400; /* Устанавливаем нормальную жирность шрифта */
+    font-size: 1em; /* Устанавливаем размер шрифта */
+}
+
+/* Стили для чекбоксов */
+#order-form-section input[type="checkbox"] {
+    margin-right: 7px; /* Устанавливаем правый отступ */
+    accent-color: #ff6347; /* Устанавливаем цвет акцента */
+    vertical-align: middle; /* Выравниваем по вертикали */
+    margin-top: 0; /* Убираем верхний отступ */
+}
+
+/* Стили для радиокнопок */
+#order-form-section input[type="radio"] {
+    accent-color: #ff6347; /* Устанавливаем цвет акцента */
+    margin-right: 5px; /* Устанавливаем правый отступ */
+    margin-left: 0; /* Убираем левый отступ */
+    vertical-align: middle; /* Выравниваем по вертикали */
+    margin-top: 0; /* Убираем верхний отступ */
+}
+
+/* Стили для группы радиокнопок */
+#order-form-section .radio-group {
+    margin-bottom: 10px; /* Устанавливаем нижний отступ */
+}
+
+/* Стили для информационного текста */
+#order-form-section .info-text {
+    font-size: 0.95em; /* Устанавливаем размер шрифта */
+    color: #888; /* Устанавливаем серый цвет текста */
+    margin-bottom: 10px; /* Устанавливаем нижний отступ */
+    margin-top: 0; /* Убираем верхний отступ */
+}
+
+/* Стили для кнопок формы */
+#order-form-section button[type="reset"],
+#order-form-section button[type="submit"] {
+    font-size: 1em; /* Устанавливаем размер шрифта */
+    font-family: 'Montserrat', sans-serif; /* Устанавливаем шрифт */
+    padding: 10px 28px; /* Устанавливаем внутренние отступы */
+    border-radius: 10px; /* Скругляем углы */
+    border: none; /* Убираем границу */
+    margin-top: 18px; /* Устанавливаем верхний отступ */
+    margin-right: 10px; /* Устанавливаем правый отступ */
+    background: #f1eee9; /* Устанавливаем цвет фона */
+    color: #2c3e50; /* Устанавливаем цвет текста */
+    font-weight: 600; /* Устанавливаем жирность шрифта */
+    cursor: pointer; /* Устанавливаем курсор pointer */
+    transition: background 0.2s, color 0.2s; /* Добавляем плавный переход */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Добавляем тень */
+}
+
+/* Стили для кнопки отправки */
+#order-form-section button[type="submit"] {
+    background: #ff6347; /* Устанавливаем красный цвет фона */
+    color: #fff; /* Устанавливаем белый цвет текста */
+}
+
+/* Эффекты при наведении на кнопки */
+#order-form-section button[type="reset"]:hover {
+    background: #e0e0e0; /* Устанавливаем серый цвет фона при наведении */
+}
+
+#order-form-section button[type="submit"]:hover {
+    background: #d94d2a; /* Устанавливаем темно-красный цвет фона при наведении */
+}
+
+/* Адаптивность формы */
+@media (max-width: 900px) {
+    #order-form-section form {
+        flex-direction: column; /* Располагаем элементы вертикально */
+        gap: 0; /* Убираем отступ между элементами */
+    }
+    #order-form-section fieldset {
+        min-width: unset; /* Сбрасываем минимальную ширину */
+        margin-bottom: 30px; /* Устанавливаем нижний отступ */
+    }
+}
+
+/* Стили для чекбоксов и радиокнопок в форме */
+#order-form-section .form-checkbox,
+#order-form-section .form-radio {
+    display: flex; /* Используем flexbox */
+    align-items: center; /* Выравниваем элементы по центру */
+    margin-top: 18px; /* Устанавливаем верхний отступ */
+    margin-bottom: 0; /* Убираем нижний отступ */
+    margin-left: 18px; /* Устанавливаем левый отступ */
+}
+
+/* Стили для меток чекбоксов и радиокнопок */
+#order-form-section .form-checkbox label,
+#order-form-section .form-radio label {
+    margin: 0 0 0 8px; /* Устанавливаем отступы */
+    display: inline; /* Отображаем как строчный элемент */
+    font-weight: 400; /* Устанавливаем нормальную жирность шрифта */
+    font-size: 1em; /* Устанавливаем размер шрифта */
+    white-space: normal; /* Разрешаем перенос текста */
+}
+
+/* Стили для радиокнопок */
+#order-form-section .form-radio {
+    margin-top: 8px; /* Устанавливаем верхний отступ */
+}
+
+/* Стили для группы радиокнопок */
+#order-form-section .radio-group {
+    margin-bottom: 10px; /* Устанавливаем нижний отступ */
+    margin-top: 0; /* Убираем верхний отступ */
+}
+
+/* Стили для группы радиокнопок */
+#order-form-section .radio-group {
+    display: flex; /* Используем flexbox */
+    flex-direction: column; /* Располагаем элементы вертикально */
+    gap: 0; /* Убираем отступ между элементами */
+}
+
+/* Стили для чекбоксов */
+#order-form-section input[type="checkbox"] {
+    margin: 0; /* Убираем отступы */
+}
+
+/* Стили для радиокнопок */
+#order-form-section input[type="radio"] {
+    margin: 0; /* Убираем отступы */
+}
+
+/* Стили для блока с итоговой суммой */
+.order-total {
+    margin-top: 18px; /* Устанавливаем верхний отступ */
+    font-size: 1.15em; /* Устанавливаем размер шрифта */
+    font-weight: 700; /* Устанавливаем жирность шрифта */
+    color: #222; /* Устанавливаем цвет текста */
+    text-align: left; /* Выравниваем текст по левому краю */
+}
+
+/* Адаптивность для секции формы */
+@media (max-width: 1300px) {
+    #order-form-section {
+        max-width: 98vw; /* Устанавливаем максимальную ширину */
+        padding-left: 20px; /* Устанавливаем левый отступ */
+        padding-right: 20px; /* Устанавливаем правый отступ */
+    }
+}
+
+/* Стили для фильтров */
+.filters {
+    margin-bottom: 20px; /* Устанавливаем нижний отступ */
+    display: flex; /* Используем flexbox */
+    gap: 10px; /* Устанавливаем отступ между элементами */
+}
+
+/* Стили для кнопок фильтров */
+.filter-btn {
+    padding: 8px 16px; /* Устанавливаем внутренние отступы */
+    border: none; /* Убираем границу */
+    border-radius: 20px; /* Скругляем углы */
+    background: #f1eee9; /* Устанавливаем цвет фона */
+    color: #2c3e50; /* Устанавливаем цвет текста */
+    cursor: pointer; /* Устанавливаем курсор pointer */
+    font-size: 0.9em; /* Устанавливаем размер шрифта */
+    transition: all 0.2s; /* Добавляем плавный переход */
+}
+
+/* Эффект при наведении на кнопку фильтра */
+.filter-btn:hover {
+    background: #e0e0e0; /* Устанавливаем серый цвет фона при наведении */
+}
+
+/* Стили для активной кнопки фильтра */
+.filter-btn.active {
+    background: #ff6347; /* Устанавливаем красный цвет фона */
+    color: white; /* Устанавливаем белый цвет текста */
+} 
