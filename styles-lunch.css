@@ -1,0 +1,320 @@
+/* Стили для сетки меню */
+.menu-items {
+    display: grid; /* Установка сетки */
+    grid-template-columns: repeat(3, 1fr); /* Три колонки равной ширины */
+    gap: 10px; /* Отступ между элементами */
+}
+
+/* Стили для карточки блюда */
+.menu-item {
+    display: flex; /* Установка flex-контейнера */
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: center; /* Выравнивание по центру */
+    padding: 30px 40px; /* Внутренние отступы */
+    border-radius: 35px; /* Скругление углов */
+    background: #fff; /* Белый фон */
+    cursor: pointer; /* Курсор-указатель */
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13)); /* Тень */
+    transition: border 0.2s, box-shadow 0.2s; /* Плавные переходы */
+    border: 2px solid transparent; /* Прозрачная граница */
+}
+
+.menu-item:hover {
+    border: 2px solid tomato; /* Красная граница при наведении */
+}
+
+.menu-item img {
+    width: 100%; /* Полная ширина */
+    border-radius: 35px; /* Скругление углов */
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+.menu-item p:nth-child(3) {
+    font-size: 1.3em; /* Размер шрифта */
+    font-weight: 600; /* Жирный шрифт */
+    margin-bottom: 5px; /* Отступ снизу */
+}
+
+.menu-item p:nth-child(4) {
+    color: #888; /* Серый цвет */
+    margin-bottom: 5px; /* Отступ снизу */
+}
+
+.menu-item p:nth-child(5) {
+    font-size: 1.2em; /* Размер шрифта */
+    font-weight: 700; /* Жирный шрифт */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.menu-item button {
+    background: #f1eee9; /* Цвет фона */
+    color: #2c3e50; /* Цвет текста */
+    border: none; /* Без границы */
+    border-radius: 10px; /* Скругление углов */
+    padding: 10px 30px; /* Внутренние отступы */
+    font-size: 1em; /* Размер шрифта */
+    margin-top: 20px; /* Отступ сверху */
+    cursor: pointer; /* Курсор-указатель */
+    transition: background 0.2s; /* Плавный переход */
+}
+
+.menu-item:hover button {
+    background: tomato; /* Красный фон при наведении */
+    color: #fff; /* Белый текст */
+}
+
+/* Стили для навигации */
+nav {
+    display: flex; /* Установка flex-контейнера */
+    flex-wrap: wrap; /* Перенос на новую строку */
+    gap: 15px; /* Отступ между элементами */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+nav a {
+    color: #2c3e50; /* Цвет текста */
+    text-decoration: none; /* Без подчеркивания */
+    font-family: 'Montserrat', sans-serif; /* Шрифт */
+    font-size: 1.1em; /* Размер шрифта */
+    transition: color 0.3s ease; /* Плавный переход */
+}
+
+nav a#active {
+    color: tomato; /* Красный цвет для активной ссылки */
+    font-weight: 700; /* Жирный шрифт */
+}
+
+/* Адаптивность для страницы "Собрать ланч" */
+@media (max-width: 800px) {
+    section > h2 {
+        text-align: center; /* Выравнивание по центру */
+    }
+    .menu-items {
+        grid-template-columns: repeat(2, 1fr); /* Две колонки */
+    }
+}
+
+@media (max-width: 600px) {
+    section > h2 {
+        text-align: center; /* Выравнивание по центру */
+    }
+    .menu-items {
+        grid-template-columns: 1fr; /* Одна колонка */
+    }
+    .menu-item {
+        padding: 20px 10px; /* Уменьшенные отступы */
+    }
+}
+
+/* Стили для формы заказа */
+#order-form-section {
+    max-width: 1200px; /* Максимальная ширина */
+    margin: 40px auto 0 auto; /* Внешние отступы */
+    background: #fff; /* Белый фон */
+    border-radius: 20px; /* Скругление углов */
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08); /* Тень */
+    padding: 50px 60px 40px 60px; /* Внутренние отступы */
+}
+
+#order-form-section h2 {
+    text-align: center; /* Выравнивание по центру */
+    font-size: 2em; /* Размер шрифта */
+    font-weight: 700; /* Жирный шрифт */
+    margin-bottom: 30px; /* Отступ снизу */
+}
+
+#order-form-section form {
+    display: flex; /* Установка flex-контейнера */
+    gap: 40px; /* Отступ между элементами */
+    justify-content: center; /* Выравнивание по центру */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+}
+
+#order-form-section fieldset {
+    border: none; /* Без границы */
+    padding: 0; /* Без отступов */
+    min-width: 320px; /* Минимальная ширина */
+    width: 100%; /* Полная ширина */
+}
+
+#order-form-section legend {
+    font-size: 1.2em; /* Размер шрифта */
+    font-weight: 600; /* Жирный шрифт */
+    margin-bottom: 18px; /* Отступ снизу */
+    text-align: left; /* Выравнивание по левому краю */
+}
+
+#order-form-section label {
+    display: block; /* Блочный элемент */
+    font-size: 1em; /* Размер шрифта */
+    font-weight: 500; /* Жирный шрифт */
+    margin-bottom: 6px; /* Отступ снизу */
+    margin-top: 18px; /* Отступ сверху */
+}
+
+#order-form-section input[type="text"],
+#order-form-section input[type="email"],
+#order-form-section input[type="tel"],
+#order-form-section input[type="time"],
+#order-form-section select,
+#order-form-section textarea {
+    width: 100%; /* Полная ширина */
+    font-size: 1em; /* Размер шрифта */
+    padding: 10px 12px; /* Внутренние отступы */
+    border: 1.5px solid #e0e0e0; /* Граница */
+    border-radius: 10px; /* Скругление углов */
+    margin-bottom: 6px; /* Отступ снизу */
+    background: #fafafa; /* Цвет фона */
+    font-family: 'Montserrat', sans-serif; /* Шрифт */
+    box-sizing: border-box; /* Учет границ в ширине */
+    transition: border 0.2s; /* Плавный переход */
+}
+
+#order-form-section input[type="text"]:focus,
+#order-form-section input[type="email"]:focus,
+#order-form-section input[type="tel"]:focus,
+#order-form-section input[type="time"]:focus,
+#order-form-section select:focus,
+#order-form-section textarea:focus {
+    border: 1.5px solid #ff6347; /* Красная граница при фокусе */
+    outline: none; /* Без контура */
+}
+
+#order-form-section textarea {
+    min-height: 70px; /* Минимальная высота */
+    resize: vertical; /* Изменение размера по вертикали */
+}
+
+#order-form-section input[type="checkbox"] + label,
+#order-form-section input[type="radio"] + label {
+    display: inline-block; /* Строчно-блочный элемент */
+    vertical-align: middle; /* Выравнивание по вертикали */
+    margin-top: 0; /* Без отступа сверху */
+    margin-bottom: 0; /* Без отступа снизу */
+    font-weight: 400; /* Обычный шрифт */
+    font-size: 1em; /* Размер шрифта */
+}
+
+#order-form-section input[type="checkbox"] {
+    margin-right: 7px; /* Отступ справа */
+    accent-color: #ff6347; /* Цвет акцента */
+    vertical-align: middle; /* Выравнивание по вертикали */
+    margin-top: 0; /* Без отступа сверху */
+}
+
+#order-form-section input[type="radio"] {
+    accent-color: #ff6347; /* Цвет акцента */
+    margin-right: 5px; /* Отступ справа */
+    margin-left: 0; /* Без отступа слева */
+    vertical-align: middle; /* Выравнивание по вертикали */
+    margin-top: 0; /* Без отступа сверху */
+}
+
+#order-form-section .radio-group {
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+#order-form-section .info-text {
+    font-size: 0.95em; /* Размер шрифта */
+    color: #888; /* Серый цвет */
+    margin-bottom: 10px; /* Отступ снизу */
+    margin-top: 0; /* Без отступа сверху */
+}
+
+#order-form-section button[type="reset"],
+#order-form-section button[type="submit"] {
+    font-size: 1em; /* Размер шрифта */
+    font-family: 'Montserrat', sans-serif; /* Шрифт */
+    padding: 10px 28px; /* Внутренние отступы */
+    border-radius: 10px; /* Скругление углов */
+    border: none; /* Без границы */
+    margin-top: 18px; /* Отступ сверху */
+    margin-right: 10px; /* Отступ справа */
+    background: #f1eee9; /* Цвет фона */
+    color: #2c3e50; /* Цвет текста */
+    font-weight: 600; /* Жирный шрифт */
+    cursor: pointer; /* Курсор-указатель */
+    transition: background 0.2s, color 0.2s; /* Плавные переходы */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Тень */
+}
+
+#order-form-section button[type="submit"] {
+    background: #ff6347; /* Красный фон */
+    color: #fff; /* Белый текст */
+}
+
+#order-form-section button[type="reset"]:hover {
+    background: #e0e0e0; /* Серый фон при наведении */
+}
+
+#order-form-section button[type="submit"]:hover {
+    background: #d94d2a; /* Темно-красный фон при наведении */
+}
+
+@media (max-width: 900px) {
+    #order-form-section form {
+        flex-direction: column; /* Вертикальное расположение */
+        gap: 0; /* Без отступов */
+    }
+    #order-form-section fieldset {
+        min-width: unset; /* Сброс минимальной ширины */
+        margin-bottom: 30px; /* Отступ снизу */
+    }
+}
+
+#order-form-section .form-checkbox,
+#order-form-section .form-radio {
+    display: flex; /* Установка flex-контейнера */
+    align-items: center; /* Выравнивание по центру */
+    margin-top: 18px; /* Отступ сверху */
+    margin-bottom: 0; /* Без отступа снизу */
+    margin-left: 18px; /* Отступ слева */
+}
+
+#order-form-section .form-checkbox label,
+#order-form-section .form-radio label {
+    margin: 0 0 0 8px; /* Отступы */
+    display: inline; /* Строчный элемент */
+    font-weight: 400; /* Обычный шрифт */
+    font-size: 1em; /* Размер шрифта */
+    white-space: normal; /* Нормальный перенос */
+}
+
+#order-form-section .form-radio {
+    margin-top: 8px; /* Отступ сверху */
+}
+
+#order-form-section .radio-group {
+    margin-bottom: 10px; /* Отступ снизу */
+    margin-top: 0; /* Без отступа сверху */
+}
+
+#order-form-section .radio-group {
+    display: flex; /* Установка flex-контейнера */
+    flex-direction: column; /* Вертикальное расположение */
+    gap: 0; /* Без отступов */
+}
+
+#order-form-section input[type="checkbox"] {
+    margin: 0; /* Без отступов */
+}
+
+#order-form-section input[type="radio"] {
+    margin: 0; /* Без отступов */
+}
+
+.order-total {
+    margin-top: 18px; /* Отступ сверху */
+    font-size: 1.15em; /* Размер шрифта */
+    font-weight: 700; /* Жирный шрифт */
+    color: #222; /* Цвет текста */
+    text-align: left; /* Выравнивание по левому краю */
+}
+
+@media (max-width: 1300px) {
+    #order-form-section {
+        max-width: 98vw; /* Максимальная ширина */
+        padding-left: 20px; /* Отступ слева */
+        padding-right: 20px; /* Отступ справа */
+    }
+} 
